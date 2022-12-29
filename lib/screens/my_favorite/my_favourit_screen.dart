@@ -9,6 +9,7 @@ class MyFavouritScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: "Home".appTextStyle(size: 20,fontWeight: FontWeight.w400),
+
       ),
     );
   }
