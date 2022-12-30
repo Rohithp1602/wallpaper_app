@@ -1,8 +1,16 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:wallpaper_app/screens/home_wallpaper_catagory_screens/category_screen.dart';
+import 'package:wallpaper_app/screens/home_wallpaper_catagory_screens/clock_wallpaper.dart';
+import 'package:wallpaper_app/screens/home_wallpaper_catagory_screens/exclusive_screen.dart';
+import 'package:wallpaper_app/screens/home_wallpaper_catagory_screens/live_wallpaper_screen.dart';
+import 'package:wallpaper_app/screens/home_wallpaper_catagory_screens/quotes_wallpaper_screen.dart';
+import 'package:wallpaper_app/screens/home_wallpaper_catagory_screens/wallpaper_screen.dart';
 import 'package:wallpaper_app/utils/app_string.dart';
 import 'package:wallpaper_app/utils/extentions.dart';
 
 import '../widget/app_drawer.dart';
+import 'home_wallpaper_catagory_screens/treading_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -14,7 +22,6 @@ class HomeScreen extends StatelessWidget {
       child: Scaffold(
           appBar: AppBar(
               bottom: TabBar(
-
                   isScrollable: true,
                   unselectedLabelColor: Colors.black,
                   padding: const EdgeInsets.all(5),
@@ -58,27 +65,13 @@ class HomeScreen extends StatelessWidget {
           drawer: const AppDrawer(),
           body: const TabBarView(
             children: <Widget>[
-              Center(
-                child: Text('Tab 1'),
-              ),
-              Center(
-                child: Text('Tab 2'),
-              ),
-              Center(
-                child: Text('Tab 3'),
-              ),
-              Center(
-                child: Text('Tab 4'),
-              ),
-              Center(
-                child: Text('Tab 5'),
-              ),
-              Center(
-                child: Text('Tab 6'),
-              ),
-              Center(
-                child: Text('Tab 7'),
-              ),
+              TreadingScreen(),
+              ExclusiveScreen(),
+              LiveWallpaperScreen(),
+              WallpaperScreen(),
+              QuotesWallpaperScreen(),
+              ClockWallpaperScreen(),
+              CategoryScreen(),
             ],
           )),
     );
