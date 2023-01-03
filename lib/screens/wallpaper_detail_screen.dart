@@ -86,6 +86,11 @@ class _WallpaperDetailScreenState extends State<WallpaperDetailScreen> {
                     width: 50,
                   ),
                   Image.asset(
+                    AppIcons.icSetWallpaper,
+                    height: 50,
+                    width: 50,
+                  ),
+                  Image.asset(
                     AppIcons.icShare,
                     height: 50,
                     width: 50,

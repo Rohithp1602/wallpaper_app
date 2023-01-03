@@ -7,6 +7,7 @@ class AppIcons{
   static const String icUnlike = "assets/icon/ic_unlike.png";
   static const String icShare = "assets/icon/ic_share.png";
   static const String icMore = "assets/icon/ic_more.png";
+  static const String icSetWallpaper = "assets/icon/ic_set_wallpaper.png";
 }
 
 class AppImages{
