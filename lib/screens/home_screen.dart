@@ -17,6 +17,14 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List wallpaperString = [
+      AppImages.imgW1,
+      AppImages.imgW2,
+      AppImages.imgW3,
+      AppImages.imgW4,
+    ];
+    double mqHeight = MediaQuery.of(context).size.height;
+    double mqWidth = MediaQuery.of(context).size.width;
     return DefaultTabController(
       length: 7,
       child: Scaffold(
