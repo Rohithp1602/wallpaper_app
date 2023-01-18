@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:wallpaper_app/utils/app_string.dart';
+import 'package:wallpaper_app/utils/download_media_utils.dart';
+import 'package:wallpaper_app/utils/wallpaper_utils.dart';
 
 class WallpaperDetailScreen extends StatefulWidget {
   String imgString;
@@ -12,6 +14,13 @@ class WallpaperDetailScreen extends StatefulWidget {
 }
 
 class _WallpaperDetailScreenState extends State<WallpaperDetailScreen> {
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+  }
   bool isLike = false;
 
   @override
@@ -50,7 +59,7 @@ class _WallpaperDetailScreenState extends State<WallpaperDetailScreen> {
                     width: 50,
                   ),
                 ],
-              ).paddingOnly(top: 50, left: 25,right: 25),
+              ).paddingOnly(top: 50, left: 25, right: 25),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -80,15 +89,26 @@ class _WallpaperDetailScreenState extends State<WallpaperDetailScreen> {
                             width: 50,
                           ),
                         ),
-                  Image.asset(
-                    AppIcons.icDownload,
-                    height: 50,
-                    width: 50,
+                  InkWell(
+                    onTap: () {
+                      DownlaodMediaUtils.download();
+                    },
+                    child: Image.asset(
+                      AppIcons.icDownload,
+                      height: 50,
+                      width: 50,
+                    ),
                   ),
-                  Image.asset(
-                    AppIcons.icSetWallpaper,
-                    height: 50,
-                    width: 50,
+                  InkWell(
+                    onTap: () {
+                      WallpaperUtils.dowloadImage(context,
+                          "https://images.pexels.com/photos/8803905/pexels-photo-8803905.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+                    },
+                    child: Image.asset(
+                      AppIcons.icSetWallpaper,
+                      height: 50,
+                      width: 50,
+                    ),
                   ),
                   Image.asset(
                     AppIcons.icShare,

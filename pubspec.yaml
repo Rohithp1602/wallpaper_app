@@ -35,11 +35,22 @@ dependencies:
   # state management
   get: ^4.6.5
 
+  # wallpaper set network
+  wallpaper: ^1.1.0
+
+  # url launcher
+  url_launcher: ^6.1.7
+  # download media
+  image_gallery_saver: ^1.7.1
+  dio: ^4.0.6
+  path_provider: ^2.0.11
+  permission_handler: ^10.2.0
   #font
   google_fonts: ^3.0.1
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  #firbase
   firebase_core: ^2.4.1
   firebase_auth: ^4.2.5
   firebase_storage: ^11.0.10

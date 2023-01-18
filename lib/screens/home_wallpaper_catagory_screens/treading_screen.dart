@@ -3,12 +3,19 @@ import 'package:get/get.dart';
 import 'package:wallpaper_app/screens/wallpaper_detail_screen.dart';
 import 'package:wallpaper_app/utils/app_string.dart';
 import 'package:wallpaper_app/utils/extentions.dart';
+import 'package:wallpaper_app/utils/storage.dart';
 
-class TreadingScreen extends StatelessWidget {
+class TreadingScreen extends StatefulWidget {
   const TreadingScreen({Key? key}) : super(key: key);
 
   @override
+  State<TreadingScreen> createState() => _TreadingScreenState();
+}
+
+class _TreadingScreenState extends State<TreadingScreen> {
+  @override
   Widget build(BuildContext context) {
+    final Storage storage = Storage();
     List wallpaperString = [
       AppImages.imgW1,
       AppImages.imgW2,
@@ -37,6 +44,32 @@ class TreadingScreen extends StatelessWidget {
                 ),
               ),
             ),
+            // Container(
+            //   height: 300,
+            //   child: FutureBuilder(
+            //     future: storage.downloadUrl('w1.jpg'),
+            //     builder: (BuildContext context, AsyncSnapshot<String> snapshot) {
+            //       if (snapshot.connectionState == ConnectionState.done &&
+            //           snapshot.hasData) {
+            //         return Container(
+            //           height: 200,
+            //           width: 200,
+            //           child: Image.network(
+            //             snapshot.data!,
+            //             fit: BoxFit.cover,
+            //           ),
+            //         );
+            //       }
+            //       if (snapshot.connectionState == ConnectionState.waiting &&
+            //           snapshot.hasData) {
+            //         return Center(
+            //           child: CircularProgressIndicator(),
+            //         );
+            //       }
+            //       return Container();
+            //     },
+            //   ),
+            // ),
             (15.0).addHSpace(),
             SizedBox(
               child: GridView.builder(

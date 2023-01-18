@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:wallpaper_app/utils/extentions.dart';
 import 'package:wallpaper_app/utils/routes.dart';
 
@@ -48,7 +49,7 @@ class AppDrawer extends StatelessWidget {
             ),
             InkWell(
               onTap: () {
-               Get.back();
+                Get.back();
               },
               child: Container(
                 decoration: BoxDecoration(
@@ -139,7 +140,11 @@ class AppDrawer extends StatelessWidget {
               ),
             ),
             InkWell(
-              onTap: () {},
+              onTap: () {
+                print("tap**");
+                launch(
+                    'mailto:rohithp8141@gmail.com?subject=App Feedback&body=Please give us feedback');
+              },
               child: ListTile(
                 leading: const Icon(Icons.email_rounded),
                 title: "Send us Feedback"
